@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Vault - Optimized</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" data-module>
+      // Ensure React, ReactDOM, and lucide are available on the window if not already
+      // Babel standalone with data-module should handle ES6 imports correctly.
+      // The UMD builds of React/ReactDOM already place themselves on window.
+      // lucide-react UMD also exposes `lucide` globally.
+
+      // Import the main App component from CodeVault.jsx
+      // Babel will fetch and transpile CodeVault.jsx and its dependencies.
+      import App from './CodeVault.jsx';
+
+      // Render the App component into the root div
+      ReactDOM.render(
+        React.createElement(App),
+        document.getElementById('root')
+      );
+    </script>
+</body>
+</html>
